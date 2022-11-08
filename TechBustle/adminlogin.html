@@ -1,0 +1,90 @@
+
+<html>
+    
+    <body>
+    <head><title>Admin Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <style>
+            body{
+                background-image:url("b1.jpg");
+                color: aliceblue;
+                font-family:Freestyle Script;
+                font-size: 100px;
+            }
+    
+            .main-form{
+                margin-top: 30px;
+                background:rgba(	16, 52, 99,0.6);
+                align-items: center;
+                width: 100%;
+                font-size:40px;
+                font-family:Freestyle Script;
+                border-radius: 10px;
+               
+                
+            }
+            .f1{
+               color: aliceblue;
+               padding: 50px 50px 50px 50px;
+            }
+            input[type="text"], input[type="email"], input[type="password"], input[type="number"]{
+                background-color:rgba(253, 224, 224,0.6);
+                margin-top: 10px;
+                color: #1c2b51;
+                width: 100%;
+                height: 55px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border-style:ridge
+                
+            }
+            .button {
+                display: inline-block;
+                padding: 10px 15px;
+                font-size: 40px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                color: white;
+                background-color:rgba(253, 224, 224,0.6);
+                border: 5;
+                box-shadow: white;
+                margin-top:10px;
+                margin-left:10px;
+
+            }
+
+            .button:hover {background-color:rgba(253, 224, 224)}
+
+            .button:active {
+                background-color:#1c2b51;
+                box-shadow: 0 5px white;
+                transform: translateY(4px);
+            }
+        </style>
+    </head> <body>
+    <div class = "container-fluid">
+            <div class = "row">
+                <div class= "col-md-3">
+                </div>
+                    <div class= "col-md-6">
+                        Admin Login 
+                     <div class= "main-form">
+    <form class= "f1" action="adminlogincheck.php" method="POST">
+                             
+                             Email-id:  <br>
+                             <input type="email" name="email">
+                             Password:  <br>
+                             <input type="password" name="password">
+                             <br>
+                             <button type= "submit"  class="button">Login!</button>
+                             </form>
+                             
+                             
+                    </div>
+                </div>
+            </div>
+            </div>
+    </body>
+</html>

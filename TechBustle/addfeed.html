@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>form</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <style>
+            .main-form{
+                margin-top:20px;
+               
+                width:100%;
+                height:600px;
+                font-size:25px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border-radius:10px;
+                color:black;
+                
+                background-color:rgb(255,255,255,0.3);
+            }
+            .container-fluid{
+                background-image:url(j1.jpg);
+                background-size: cover;
+                border-radius: 10px;
+            }
+            h1{
+                color :black;
+              font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            label{
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4" id="l">
+                    <img src="logo.png" style="width: 100%; margin-top:-180px;  background-color: rgb(255,255,255,0.3);">
+                    <img src="uu.png" style="width: 100%; margin-top: -160px;">
+                </div>
+        <div class="col-md-7">
+            <div class="main-form">
+                <h1>WELCOME TO TECHBUSTLE</h1><br><br>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">    
+            Heading: <input type="text" name="head" required>*Required
+            <br>
+            <label for="cat">Choose a category:</label>
+            <select id="cat" name="cat">
+              <option value="O" >---</option>
+              <option value="A">Artificial Intelligence</option>
+              <option value="R">Robotics</option>
+              <option value="P">Programming</option>
+              <option value="O" >Others</option>
+            </select><br>
+            Description: <input type="textarea" name="desc" required style="height:20%; width:60%;">*Required <br>
+           <input type="file" name="file" required>*Required ( File Type : 'jpg','jpeg','png','mp4')<br> <br>
+     
+            <input type="submit" name="submit">
+            </form>
+            </div>
+            </div>
+            </div>
+            </div>
+    </body>
+</html>

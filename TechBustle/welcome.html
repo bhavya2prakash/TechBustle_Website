@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+               /* background: url("concept-social-media-different-social-icons-blue-background-social-concept-social-media-different-social-icons-blue-130552174.jpg");*/
+                background-size:cover;
+                
+            }
+            .preload{
+                width: 100%;
+                height: 100%;
+                position: fixed;
+            }
+         
+            .loaderframe{
+                width: 70px;
+                height: 70px;
+                margin: -50px 860px;
+                position: relative;
+            }
+            .loader1, .loader2{
+                position: absolute;
+                border:5px solid transparent;
+                border-radius: 50%;
+            }
+            .loader1{
+                width: 70px;
+                height: 70px;
+                border-top: 5px solid rgb(0, 37, 139); 
+                border-bottom: 5px solid rgb(0, 37, 139);
+                animation: clockwisespin 2s linear 3;
+            }
+            .loader2{
+                width: 60px;
+                height: 60px;
+                border-left: 5px solid pink ;
+                border-right: 5px solid pink;
+                top:5px;
+                left:5px;
+                animation: anticlockwisespin 2s linear 3;
+            }
+            @keyframes clockwisespin{
+                from{transform: rotate(0deg);}
+                to{transform: rotate(360deg);}
+            }
+            @keyframes anticlockwisespin{
+                from{transform: rotate(0deg);}
+                to{transform: rotate(-360deg);}
+            }
+            @keyframes fadeout{
+                from{opacity: 1;}
+                to{opacity: 0;}
+            }
+            img{
+                margin-left:-40px;
+                margin-top:-70px;
+                height:700px;
+                width:500px;
+                
+            }
+            .header{
+                height:100vh;
+                width:100%;
+            }
+            .video-background{
+                position:absolute;
+                right:0;
+                bottom:0;
+                min-width: 100%;
+                min-height:100%;
+                width:auto;
+                height:auto;
+                z-index:-1;
+                
+            }
+            @media (min-aspect-ratio:16/9)
+            {
+                .video-background{
+                    width:100%;
+                    height:auto;
+                }
+
+            }
+            @media (max-aspect-ratio:16/9)
+            {
+                .video-background{
+                    width:auto;
+                    height:100%;
+                }
+
+            }
+            
+            
+                
+            
+        </style>
+        <script>
+            (function(){
+                var preload= document.getElementById("preload");
+                var loading =0;
+                var id= setInterval(frame,64);
+                function frame(){
+                    if(loading ==100){
+                        clearInterval(id);
+                        window.open("firstpage.php", "_self");
+                    }
+                    else{
+                        loading=loading+1;
+                        if(loading==90){
+                            preload.style.animation = "fadeout is ease";
+
+                            
+                        }
+                    }
+                   
+                }
+            })();
+        </script>
+
+    </head>
+    <body>
+        <section class="header">
+            <video autoplay loop class="video-background" muted plays-inline>
+            <source src="v3.mp4" type="video/mp4">
+            </video>
+        <div class="preload">
+            <div class="logo">
+            
+                <img src="logo.png">
+             <center><h1 style="font-size:30px; color:white; margin-top:-160px; margin-left:0px;">News | Connect | Explore</h2></center>  
+              
+            </div>
+            <div class="loaderframe">
+                <div class="loader1" id="loader1"></div>
+                <div class="loader2" id="loader2"></div>
+            </div>
+            
+        </div>
+        </section>
+        <video width="10" height="10"  autoplay>
+            <source src="firstvid.mp4" type="video/mp4">
+            
+            </video>
+      
+    </body>
+</html>

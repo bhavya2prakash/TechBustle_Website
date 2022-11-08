@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>Quiz</title>
+
+    </head>
+    <style>
+     body{
+            background:url("quizback.jpg");
+        
+            background-size:cover;
+          
+        }
+        .square{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:500px;
+    margin-bottom:10px;
+    margin-top:80px;
+}
+.square span:nth-child(1)
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    border:2px solid rgb(228, 89, 209);
+    border-radius: 48% 72% 77%/81% 94% 56% 59%;
+    transition: 0.5s;
+    animation:animate 6s linear infinite;
+}
+.square:hover span:nth-child(1)
+{
+    border:none;
+    background: rgba(55, 55, 247, 0.8);
+}
+.square span:nth-child(2)
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    border:2px solid rgb(240, 62, 172);
+    border-radius: 48% 72% 77%/81% 94% 56% 59%;
+    transition: 0.5s;
+    animation:animate 4s linear infinite;
+}
+.square:hover span:nth-child(2)
+{
+    border:none;
+    background: rgba(55, 55, 247, 0.8);
+}
+.square span:nth-child(3)
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    border:2px solid rgb(233, 94, 180);
+    border-radius: 48% 72% 77%/81% 94% 56% 59%;
+    transition: 0.5s;
+    animation:animate 10s linear infinite;
+}
+.square:hover span:nth-child(3)
+{
+    border:none;
+    background: white;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate2
+{
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+.content{
+    position: relative;
+    /*padding:40px 60px;*/
+    color:rgb(247, 52, 247);
+    text-align:center;
+    transition:0.05s;
+    z-index:1000;
+    font-weight: bolder;
+    font-size:30px;
+    
+    
+}
+.btn{
+    margin-top:20px;
+    font-size: 25px;
+    color:blue;
+}
+    </style>
+    <body>
+        <div class="square">
+            <span></span>
+            <span></span>
+            <span></span>
+
+        <div class="content">
+            LET'S START QUIZ!<br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQkIxvTERKTnJ9amcPL_p84wVVlELN5M9UPIOM2hgqeb9HIA/viewform"><button class="btn">GO!</button></a>
+        </div>
+    </div>
+       
+    </body>
+</html>
